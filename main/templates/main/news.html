@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+
+{% block title %}News & Media - Nova Hospital{% endblock %}
+
+{% block content %}
+    <div style="background: #064e3b; color: white; padding: 25px 0; text-align: center;">
+        <h1>News & Media</h1>
+        <p><a href="{% url 'home' %}" style="color: #ccfbf1; text-decoration: none;">Home</a> / News & Media</p>
+    </div>
+    
+    <div class="container" style="padding: 50px 0; max-width: 900px;">
+        <h2 style="color: #0d9488; margin-bottom: 20px;">Latest Hospital Updates & Events</h2>
+        <p style="color: #334155; line-height: 1.8;">Yahan Nova Hospital ki latest health camps, press releases, aur media coverages ki jankari di jayegi.</p>
+    </div>
+{% endblock %}

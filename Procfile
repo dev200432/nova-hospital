@@ -1,0 +1,1 @@
+web: gunicorn nova_hospital.wsgi:application

@@ -1,0 +1,45 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Book Appointment - Nova Hospital{% endblock %}
+
+{% block content %}
+    <div style="background: #064e3b; color: white; padding: 25px 0; text-align: center;">
+        <h1>Book an Appointment</h1>
+        <p><a href="{% url 'home' %}" style="color: #ccfbf1; text-decoration: none;">Home</a> / Book Appointment</p>
+    </div>
+
+    <section style="padding: 50px 0; background-color: #f1f5f9;">
+        <div class="container" style="max-width: 600px; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+            <h2 style="text-align: center; color: #064e3b; margin-bottom: 20px;">Schedule Your Visit</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 5px; font-weight: 600;">Patient Name</label>
+                    <input type="text" name="patient_name" required style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 5px; font-weight: 600;">Phone Number</label>
+                    <input type="text" name="phone" required style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 5px; font-weight: 600;">Department</label>
+                    <select name="department" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px;">
+                        <option value="Internal Medicine">Internal Medicine</option>
+                        <option value="Gynaecology">Gynaecology</option>
+                        <option value="Neurosurgery">Neurosurgery</option>
+                        <option value="Orthopaedics">Orthopaedics</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 5px; font-weight: 600;">Appointment Date</label>
+                    <input type="date" name="date" required style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; margin-bottom: 5px; font-weight: 600;">Message (Optional)</label>
+                    <textarea name="message" rows="3" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px;"></textarea>
+                </div>
+                <button type="submit" class="btn-coral" style="width: 100%; padding: 12px; font-weight: 600; cursor: pointer;">Submit Appointment</button>
+            </form>
+        </div>
+    </section>
+{% endblock %}

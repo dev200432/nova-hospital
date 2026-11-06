@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block title %}About Us - Nova Hospital{% endblock %}
+
+{% block content %}
+    <div style="background: #064e3b; color: white; padding: 25px 0; text-align: center;">
+        <h1>About Nova Hospital</h1>
+        <p><a href="{% url 'home' %}" style="color: #ccfbf1; text-decoration: none;">Home</a> / About Us</p>
+    </div>
+    
+    <div class="container" style="padding: 50px 0; max-width: 800px;">
+        <h2 style="color: #0d9488; margin-bottom: 20px;">Providing Excellence in Healthcare</h2>
+        <p style="line-height: 1.8; color: #334155; margin-bottom: 15px;">Nova Hospital is a leading integrated healthcare provider committed to delivering world-class medical services, advanced diagnostics, and compassionate patient care.</p>
+        <p style="line-height: 1.8; color: #334155;">Equipped with state-of-the-art infrastructure and a team of highly experienced specialists, we ensure that every patient receives top-tier medical attention in a safe and supportive environment.</p>
+    </div>
+{% endblock %}

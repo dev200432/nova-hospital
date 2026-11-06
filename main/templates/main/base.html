@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Nova Hospital{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    
+    <div class="top-bar">
+        <div class="container">
+            <span>📞 +91-63679-59492</span>
+            <span>✉️ info@novahospital.com</span>
+            <span>📍 Gopipura Flyover, Main Tonk Road, Jaipur</span>
+        </div>
+    </div>
+
+    
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">
+                <h2>Nova <span>Hospital</span></h2>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">About Us ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'about_nova' %}">About Nova Hospital</a></li>
+                            <li><a href="{% url 'empanelments' %}">Empanelments</a></li>
+                            <li><a href="{% url 'doctors_page' %}">Our Doctors</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Services ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'service_detail' slug='joint-replacement' %}">Joint Replacement</a></li>
+                            <li><a href="{% url 'service_detail' slug='neurosurgery' %}">Neurosurgery</a></li>
+                            <li><a href="{% url 'service_detail' slug='pulmonology' %}">Pulmonology</a></li>
+                            <li><a href="{% url 'service_detail' slug='physiotherapy' %}">Physiotherapy</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{% url 'news_media' %}">News & Media</a></li>
+                    <li><a href="{% url 'blogs' %}">Blogs</a></li>
+                    <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    
+    <footer style="background-color: #064e3b; color: #ffffff; padding: 40px 0 20px 0; margin-top: 40px;">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 30px;">
+            <div>
+                <h3 style="color: #0d9488; margin-bottom: 15px;">Nova Hospital</h3>
+                <p style="font-size: 14px; color: #cbd5e1; line-height: 1.6;">Providing an exceptional patient experience and advanced healthcare services across the region.</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 15px; border-bottom: 2px solid #0d9488; display: inline-block; padding-bottom: 5px;">Useful Links</h4>
+                <ul style="list-style: none; padding: 0; font-size: 14px; color: #cbd5e1;">
+                    <li style="margin-bottom: 8px;"><a href="{% url 'about_nova' %}" style="color: #cbd5e1; text-decoration: none;">About Us</a></li>
+                    <li style="margin-bottom: 8px;"><a href="{% url 'doctors_page' %}" style="color: #cbd5e1; text-decoration: none;">Our Doctors</a></li>
+                    <li style="margin-bottom: 8px;"><a href="{% url 'contact_us' %}" style="color: #cbd5e1; text-decoration: none;">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 15px; border-bottom: 2px solid #0d9488; display: inline-block; padding-bottom: 5px;">Contact Info</h4>
+                <p style="font-size: 14px; color: #cbd5e1; margin-bottom: 8px;">📍 Main Tonk Road, Jaipur, Rajasthan</p>
+                <p style="font-size: 14px; color: #cbd5e1; margin-bottom: 8px;">📞 +91-63679-59492</p>
+                <p style="font-size: 14px; color: #cbd5e1;">✉️ info@novahospital.com</p>
+            </div>
+        </div>
+        <div style="text-align: center; border-top: 1px solid #065f46; padding-top: 15px; font-size: 13px; color: #94a3b8;">
+            &copy; 2026 Nova Hospital. All Rights Reserved. Designed by Devansh Giri Goswami.
+        </div>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Contact Us - Nova Hospital{% endblock %}
+
+{% block content %}
+    <div style="background: #064e3b; color: white; padding: 25px 0; text-align: center;">
+        <h1>Contact Us</h1>
+        <p><a href="{% url 'home' %}" style="color: #ccfbf1; text-decoration: none;">Home</a> / Contact Us</p>
+    </div>
+    
+    <div class="container" style="padding: 50px 0; max-width: 800px;">
+        <h2 style="color: #0d9488; margin-bottom: 20px;">Get in Touch With Us</h2>
+        <p style="color: #334155; line-height: 1.8; margin-bottom: 15px;"><strong>Address:</strong> Main Tonk Road, Gopipura Flyover, Jaipur, Rajasthan</p>
+        <p style="color: #334155; line-height: 1.8; margin-bottom: 15px;"><strong>Phone:</strong> +91-63679-59492</p>
+        <p style="color: #334155; line-height: 1.8;"><strong>Email:</strong> info@novahospital.com</p>
+    </div>
+{% endblock %}

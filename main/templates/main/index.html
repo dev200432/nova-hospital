@@ -1,0 +1,56 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Nova Hospital | Best Healthcare in Rajasthan{% endblock %}
+
+{% block content %}
+    
+    <div style="background-color: #ccfbf1; color: #064e3b; padding: 10px 0; font-weight: 500;">
+        <div class="container">
+            <marquee behavior="scroll" direction="left">
+                ✨ Nova Hospital में आपका स्वागत है - उन्नत स्वास्थ्य सेवाएं, 24/7 इमरजेंसी और विशेषज्ञ डॉक्टर उपलब्ध हैं।
+            </marquee>
+        </div>
+    </div>
+
+    <!-- Hero Slider Section -->
+    <section class="slider-container">
+        <div class="slide active" style="background: linear-gradient(rgba(6, 78, 59, 0.75), rgba(13, 148, 136, 0.75)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;">
+            <div class="container" style="height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; color: white;">
+                <h1 style="font-size: 42px; margin-bottom: 15px; font-weight: 700;">World-Class Healthcare Infrastructure</h1>
+                <p style="font-size: 18px; max-width: 600px; margin-bottom: 25px; line-height: 1.6;">Providing state-of-the-art medical equipment and compassionate patient care 24/7.</p>
+                <a href="{% url 'contact_us' %}" class="btn-coral">Contact Us</a>
+            </div>
+        </div>
+
+        <div class="slide" style="background: linear-gradient(rgba(6, 78, 59, 0.75), rgba(13, 148, 136, 0.75)), url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;">
+            <div class="container" style="height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; color: white;">
+                <h1 style="font-size: 42px; margin-bottom: 15px; font-weight: 700;">Expert Surgeons & Specialists</h1>
+                <p style="font-size: 18px; max-width: 600px; margin-bottom: 25px; line-height: 1.6;">Our team of renowned doctors guarantees personalized and advanced treatments.</p>
+                <a href="{% url 'contact_us' %}" class="btn-coral">Contact Us</a>
+            </div>
+        </div>
+
+        <div class="slide" style="background: linear-gradient(rgba(6, 78, 59, 0.75), rgba(13, 148, 136, 0.75)), url('https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;">
+            <div class="container" style="height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; color: white;">
+                <h1 style="font-size: 42px; margin-bottom: 15px; font-weight: 700;">24/7 Emergency & ICU Facilities</h1>
+                <p style="font-size: 18px; max-width: 600px; margin-bottom: 25px; line-height: 1.6;">Rapid response critical care and modern emergency operation theaters available round the clock.</p>
+                <a href="{% url 'contact_us' %}" class="btn-coral">Contact Emergency</a>
+            </div>
+        </div>
+    </section>
+
+    
+    <section style="padding: 50px 0; text-align: center;">
+        <div class="container">
+            <h2 style="margin-bottom: 30px; color: #064e3b;">Our Departments</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <div class="dept-card">Internal Medicine</div>
+                <div class="dept-card">Gynaecology</div>
+                <div class="dept-card">Neurosurgery</div>
+                <div class="dept-card">Plastic Surgery</div>
+                <div class="dept-card">Orthopaedics</div>
+                <div class="dept-card">Gastroenterology</div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
