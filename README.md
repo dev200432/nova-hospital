@@ -23,12 +23,3 @@ Nova Hospital is a comprehensive hospital management and healthcare web applicat
 * **Frontend:** HTML5, CSS3, JavaScript
 * **Media Handling:** Pillow
 * **Deployment Ready:** Gunicorn, WhiteNoise, Render support
-
----
-
-## ⚙️ Installation & Setup (Local Development)
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/your-username/nova-hospital.git](https://github.com/your-username/nova-hospital.git)
-   cd nova-hospital
